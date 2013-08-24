@@ -32,24 +32,26 @@ For source code, or to contribute, see the
 * xmonad 0.9.1 or 0.9.2
 * xmonad-contrib 0.9.1 or 0.9.2
 * [xmobar 0.11.1 or 0.13](http://projects.haskell.org/xmobar/)
-* [stalonetray 0.8.0](http://stalonetray.sourceforge.net/)
-* [dmenu 4.0](http://tools.suckless.org/dmenu/)
+* [trayer 1.0](http://fbpanel.sourceforge.net/)
+* [dmenu 4.0](http://tools.suckless.org/dmenu)/
+* [dmenu_path_c](https://aur.archlinux.org/packages.php?ID=38035)
 * [yeganesh 2.2](http://dmwit.com/yeganesh/)
 * [scrot 0.8](http://freshmeat.net/projects/scrot/)
 
 ### Installing requirements on [Arch Linux](http://www.archlinux.org/)
 
-    sudo pacman -S xmonad xmonad-contrib xmobar stalonetray dmenu scrot \
-        cabal-install
+    sudo pacman -S xmonad xmonad-contrib xmobar trayer scrot \
+        dmenu dmenu_path_c cabal-install
     cabal update
-    cabal install yeganesh
+    cabal install --global yeganesh
 
 ### Installing requirements on [Ubuntu Linux](http://www.ubuntu.com/)
 
-    sudo aptitude install xmonad libghc6-xmonad-contrib-dev xmobar stalonetray \
+    sudo aptitude install xmonad libghc6-xmonad-contrib-dev xmobar trayer \
         suckless-tools scrot cabal-install
     cabal update
-    cabal install yeganesh
+    cabal install --global yeganesh
+    
 
 ## Installation
 
@@ -66,14 +68,16 @@ Once xmonad-config is installed, you also need to ensure you can actually
 start xmonad.  The mechanism to do this varies based on each environment, but
 here are some instructions for some common login managers.
 
-### Starting xmonad from lightdm, xdm, kdm, or gdm
+### Starting xmonad from xdm, kdm, or gdm
 
-    ln -s ~/.xmonad/xsession ~/.xsession
-    # Logout, login from lightdm/xdm/kdm/gdm
+    echo xmonad >> ~/.xsession
+    # Note: this method will start no programs in your new session upon login.
+    # To get a terminal in your next session, press Alt+Shift+Enter.
+    # Logout, login from xdm/kdm/gdm
 
 ### Starting xmonad from slim
 
-    ln -s ~/.xmonad/xsession ~/.xinitrc
+    ln -s ~/.xmonad/xinitrc ~/.xinitrc
     # Logout, login from slim
 
 
