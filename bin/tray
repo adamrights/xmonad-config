@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+#trayer  --expand true  --edge bottom --align left --margin 0 --SetDockType true --SetPartialStrut true --width 120 --widthtype pixel --height 14 \
+#    --padding 1 --tint 0x000000 --transparent true
+
+trayer --edge top --align right --margin 0 --widthtype pixel --width 120 --heighttype pixel --height 16 --SetDockType true --SetPartialStrut true --transparent true --alpha 128 --tint 0x000000 --distance 0 --expand true --padding 2
