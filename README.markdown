@@ -1,5 +1,5 @@
 # xmonad-config
-xmonad-config is the [xmonad](http://xmonad.org/) configuration used by Vic Fryzel.
+xmonad-config is the [xmonad](http://xmonad.org/) configuration forked by Adam Bedell from Vic Fryzel configurations.
 
 
 ## Introduction
